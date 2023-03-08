@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="59.205">
+    <testcase classname="Register olma" name="TC_016 Account must be confirmed via email" time="58.401">
+        <system-out>
+            <![CDATA[When User goes to Hubcomfy..................................................passed
+And User verifies that he or she went to the home page......................passed
+And User click the register button..........................................passed
+And User clicks on the Become a vendor link.................................passed
+When User go to "minuteEmail" to receive a valid email......................passed
+And User receive the email from the page they go to.........................passed
+And The user returns to the hub-comfy page and enters the email in the email box.passed
+And User clicks the RE-SEND CODE button.....................................passed
+And The user goes back to "minuteEmail" to get the code sent to the email address.passed
+And User receives the code and returns to hubcomfy..........................passed
+And The user enters the code that comes to the e-mail address entered in the Verification Code box.passed
+And User enter a valid password.............................................passed
+And The user enters the same valid password in the confirm password as they enter in the password.passed
+And User clicks the register button.........................................passed
+Then The user verifies seeing the text Welcome to Hubcomfy!.................passed
+And The user goes to minuteEmail to verify incoming email...................passed
+And The user clicks on the Hubcomfy email...................................passed
+Then The user confirms that their My Account is visible by clicking on the Visit now... link in the email.passed
+And User quits page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>
