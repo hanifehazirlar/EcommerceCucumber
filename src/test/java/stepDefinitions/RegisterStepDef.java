@@ -134,7 +134,7 @@ public class RegisterStepDef {
 
     @And("User enters valid confirm password")
     public void userEntersValidConfirmPassword() {
-        registerPage.passwordBox.sendKeys(ConfigReader.getProperty("validPassword"));
+        registerPage.comfirmPasswordBox.sendKeys(ConfigReader.getProperty("validPassword"));
     }
 
     @And("User clicks the register button")
