@@ -115,8 +115,6 @@ public class RegisterStepDef {
 
         verificetionCode=registerPage.verificationCode.getText().replaceAll("\\D","").substring(0,6);
 
-
-
     }
 
     @And("User receives the code and returns to hubcomfy")
