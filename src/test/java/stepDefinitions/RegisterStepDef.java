@@ -181,7 +181,7 @@ public class RegisterStepDef {
     }
     @And("User confirms that This Email already exists. Please login to the site and apply as a vendor.")
     public void userConfirmsThatThisEmailAlreadyExistsPleaseLoginToTheSiteAndApplyAsAVendor() {
-        ReusableMethods.waitFor(3);
+        ReusableMethods.waitFor(7);
         Assert.assertTrue(registerPage.nonUniqeText.isDisplayed());
     }
     @And("The user enters a {string} of at least six characters including lowercase, uppercase, numbers and special characters")
