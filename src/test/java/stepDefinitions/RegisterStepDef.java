@@ -1,8 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import pages.RegisterPage;
@@ -82,7 +80,7 @@ public class RegisterStepDef {
     @Then("User go to {string} to receive a valid email")
     public void userGoToToReceiveAValidEmail(String minuteEmail) {
         Driver.getDriver().switchTo().newWindow(WindowType.TAB);
-        Driver.getDriver().get(ConfigReader.getProperty(minuteEmail));
+        Driver.getDriver().get(ConfigReader.getProperty("minuteEmail"));
     }
 
     String minuteemail;

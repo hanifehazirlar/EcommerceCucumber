@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>17 Mar 2023, 09:23</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.addressesConfirmThatThereIsWriting()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.clickOnTheMyAccountLink()</td>
+              <td>1</td>
+              <td class="duration" data-value="20482985500">20.482</td>
+              <td class="duration" data-value="20482985500">20.482</td>
+              <td class="duration" data-value="20482985500">20.482</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.confirmsThatThereAreSupportTickets()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.confirmsThatThereIsALogoutSign()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.confirmsThatThereIsAnAppointmentsSign()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.confirmsTheExistenceOfAccountDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.downloadsConfirmThatTheTextIsThere()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.followingsConfirmsThatTheTextExists()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.storeManagerConfirmsThatTheTextIsThere()</td>
+              <td>1</td>
+              <td class="duration" data-value="526342000">0.526</td>
+              <td class="duration" data-value="526342000">0.526</td>
+              <td class="duration" data-value="526342000">0.526</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.thenOrdersConfirmThatTheTextIsThere()</td>
+              <td>1</td>
+              <td class="duration" data-value="1001000">0.001</td>
+              <td class="duration" data-value="1001000">0.001</td>
+              <td class="duration" data-value="1001000">0.001</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.userClickTheSIGNINButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="372029200">0.372</td>
+              <td class="duration" data-value="372029200">0.372</td>
+              <td class="duration" data-value="372029200">0.372</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.userClicksSignIn()</td>
+              <td>1</td>
+              <td class="duration" data-value="636462100">0.636</td>
+              <td class="duration" data-value="636462100">0.636</td>
+              <td class="duration" data-value="636462100">0.636</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.userEntersAValidEmailInTheEmailBox()</td>
+              <td>1</td>
+              <td class="duration" data-value="2041669300">2.041</td>
+              <td class="duration" data-value="2041669300">2.041</td>
+              <td class="duration" data-value="2041669300">2.041</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.userEntersTheValidPasswordInThePasswordBox()</td>
+              <td>1</td>
+              <td class="duration" data-value="238015800">0.238</td>
+              <td class="duration" data-value="238015800">0.238</td>
+              <td class="duration" data-value="238015800">0.238</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginStepdef.wishlistConfirmsThatThereIsWriting()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.theUserEntersAOfAtLeastSixCharactersIncludingLowercaseUppercaseNumbersAndSpecialCharacters(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="300026000">0.300</td>
+              <td class="duration" data-value="300026000">0.300</td>
+              <td class="duration" data-value="300026000">0.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.theUserEntersTheCodeThatComesToTheEMailAddressEnteredInTheVerificationCodeBox()</td>
+              <td>1</td>
+              <td class="duration" data-value="531067800">0.531</td>
+              <td class="duration" data-value="531067800">0.531</td>
+              <td class="duration" data-value="531067800">0.531</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.theUserGoesBackToToGetTheCodeSentToTheEmailAddress(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="11540769100">11.540</td>
+              <td class="duration" data-value="11540769100">11.540</td>
+              <td class="duration" data-value="11540769100">11.540</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.theUserReturnsToTheHubComfyPageAndEntersTheEmailInTheEmailBox()</td>
+              <td>1</td>
+              <td class="duration" data-value="1070227900">1.070</td>
+              <td class="duration" data-value="1070227900">1.070</td>
+              <td class="duration" data-value="1070227900">1.070</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.theUserVerifiesSeeingTheTextStrong()</td>
+              <td>1</td>
+              <td class="duration" data-value="169009600">0.169</td>
+              <td class="duration" data-value="169009600">0.169</td>
+              <td class="duration" data-value="169009600">0.169</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.userClicksTheRESENDCODEButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2000800">0.002</td>
+              <td class="duration" data-value="2000800">0.002</td>
+              <td class="duration" data-value="2000800">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.userGoToToReceiveAValidEmail(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8545402500">8.545</td>
+              <td class="duration" data-value="8545402500">8.545</td>
+              <td class="duration" data-value="8545402500">8.545</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.userQuitsPage()</td>
+              <td>1</td>
+              <td class="duration" data-value="1226585200">1.226</td>
+              <td class="duration" data-value="1226585200">1.226</td>
+              <td class="duration" data-value="1226585200">1.226</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.userReceiveTheEmailFromThePageTheyGoTo()</td>
+              <td>1</td>
+              <td class="duration" data-value="130009500">0.130</td>
+              <td class="duration" data-value="130009500">0.130</td>
+              <td class="duration" data-value="130009500">0.130</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.userReceivesTheCodeAndReturnsToHubcomfy()</td>
+              <td>1</td>
+              <td class="duration" data-value="118098300">0.118</td>
+              <td class="duration" data-value="118098300">0.118</td>
+              <td class="duration" data-value="118098300">0.118</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.user_click_the_register_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="645680100">0.645</td>
+              <td class="duration" data-value="645680100">0.645</td>
+              <td class="duration" data-value="645680100">0.645</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.user_clicks_on_the_become_a_vendor_link()</td>
+              <td>1</td>
+              <td class="duration" data-value="6163742100">6.163</td>
+              <td class="duration" data-value="6163742100">6.163</td>
+              <td class="duration" data-value="6163742100">6.163</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.user_goes_to_hubcomfy()</td>
+              <td>2</td>
+              <td class="duration" data-value="26707623950">26.707</td>
+              <td class="duration" data-value="26707623950">30.137</td>
+              <td class="duration" data-value="53415247900">53.415</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.RegisterStepDef.user_verifies_that_he_or_she_went_to_the_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="334539400">0.334</td>
+              <td class="duration" data-value="334539400">0.334</td>
+              <td class="duration" data-value="334539400">0.334</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>29</td>
+            <td>30</td>
+            <td class="duration">3.616</td>
+            <td class="duration">53.415</td>
+            <td class="duration">1:48.491</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

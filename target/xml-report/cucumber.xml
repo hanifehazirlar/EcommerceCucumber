@@ -1,18 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="37.671">
-    <testcase classname="Register olma" name="TC_011 Email must be unique(negative test)" time="36.899">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="85.144">
+    <testcase classname="Login Test" name="TC_001 As a vendor, email, and password must be entered and My Account must appear in the system" time="23.6">
         <system-out>
-            <![CDATA[When User goes to Hubcomfy..................................................passed
-And User verifies that he or she went to the home page......................passed
-And User click the register button..........................................passed
-And User clicks on the Become a vendor link.................................passed
-When User enters a non-unique email in the email box........................passed
-And User enters a postal code in the Verification Code box..................passed
-And User enter a valid password.............................................passed
-And User enters valid confirm password......................................passed
-And User clicks the register button.........................................passed
-And User confirms that This Email already exists. Please login to the site and apply as a vendor..passed
+            <![CDATA[Given User goes to Hubcomfy.................................................passed
+And User clicks Sign In.....................................................passed
+And User enters a valid email in the email box..............................passed
+And User enters the valid password in the password box......................passed
+And User click the SIGN IN button...........................................passed
+Then The user confirms that they went to the My Account page................passed
 And User quits page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Test" name="TC_002 As a vendor, email, and password must be entered and My Account must appear in the system(Negative Test)" time="14.387">
+        <system-out>
+            <![CDATA[Given User goes to Hubcomfy.................................................passed
+And User clicks Sign In.....................................................passed
+And User enters "16project.qa@gmail.com" and "02Team.20" from use cases.....passed
+And User click the SIGN IN button...........................................passed
+Then User confirms that they cannot go to the My Account page...............passed
+And User quits page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Test" name="TC_003 Orders, Downloads, addresses, account information, who list and Checkout should be visible" time="23.355">
+        <system-out>
+            <![CDATA[Given User goes to Hubcomfy.................................................passed
+And User clicks Sign In.....................................................passed
+And User enters a valid email in the email box..............................passed
+And User enters the valid password in the password box......................passed
+And User click the SIGN IN button...........................................passed
+And Click on the My Account link............................................passed
+Then Verifies the visibility of Orders......................................passed
+Then Corrects the visibility of the Downloads text..........................passed
+Then Verifies the visibility of Addresses...................................passed
+Then Verifies the visibility of Account details.............................passed
+Then Verifies the visibility of the Wishlist text...........................passed
+Then Verifies the visibility of the Logout text.............................passed
+And User quits page.........................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Login Test" name="TC_004 Under the Dashboard; Store manager, orders, downloads, addresses, account details, appointments," time="22.973">
+        <system-out>
+            <![CDATA[Given User goes to Hubcomfy.................................................passed
+And User clicks Sign In.....................................................passed
+And User enters a valid email in the email box..............................passed
+And User enters the valid password in the password box......................passed
+And User click the SIGN IN button...........................................passed
+And Click on the My Account link............................................passed
+Then Store manager confirms that the text is there..........................passed
+Then Then orders confirm that the text is there.............................passed
+Then Downloads confirm that the text is there...............................passed
+Then Addresses confirm that there is writing................................passed
+Then Confirms the existence of account details..............................passed
+Then Confirms that there is an Appointments sign............................passed
+Then Wishlist confirms that there is writing................................passed
+Then Confirms that there are support tickets................................passed
+Then Followings confirms that the text exists...............................passed
+Then Confirms that there is a logout sign...................................passed
 ]]>
         </system-out>
     </testcase>

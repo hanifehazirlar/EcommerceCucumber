@@ -6,23 +6,23 @@ Feature: Register olma
     And User verifies that he or she went to the home page
     And User click the register button
     And User clicks on the Become a vendor link
-
+  @Register_TC01
   Scenario: TC_01 To register as a vendor, please navigate with the 'Become a vendor' button
     Then User verifies that Vendor Registration is visible
     And User quits page
-
+  @Register_TC02
   Scenario: TC_02 The registration page must have three features; email, password, and confirm password
     Then User verifies that there is an email box on the Vendor Registration page
     Then User verifies that there is a password box on the Vendor Registration page
     Then User verifies that there is a confirm password box on the Vendor Registration page
     And User quits page
-
+  @Register_TC03
   Scenario: TC_003 Email cannot be left blank and must be a valid email(negative test)
     And   User click the REGISTER button
     Then  User verifies that they have received the warning Email This field is required.
     And User quits page
 
-  @TC4
+  @Register_TC04
   Scenario: TC_004 Email cannot be left blank and must be a valid email
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -37,7 +37,7 @@ Feature: Register olma
     Then The user verifies seeing the text Welcome to Hubcomfy!
     And User quits page
 
-  @TC5
+  @Register_TC0506070809
   Scenario Outline: TC_005,006, 007, 008, 009 Email cannot be left blank and must be a valid email(negative test)
     And User enters an "<invalid email>"
     Then User verifies that Please provide a valid email address. appears
@@ -50,7 +50,7 @@ Feature: Register olma
      #| 16projectqa@.com|
      #|  @qa.com|
 
-  @TC10
+  @Register_T10
   Scenario: TC_010 Email must be unique
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -65,7 +65,7 @@ Feature: Register olma
     Then The user verifies seeing the text Welcome to Hubcomfy!
     And User quits page
 
-  @TC11
+  @Register_TC11
   Scenario: TC_011 Email must be unique(negative test)
     When User enters a non-unique email in the email box
     And User enters a postal code in the Verification Code box
@@ -75,7 +75,7 @@ Feature: Register olma
     And User confirms that This Email already exists. Please login to the site and apply as a vendor.
     And User quits page
 
-  @TC12
+  @Register_TC12
   Scenario Outline: TC_12 Create a strong password: use lowercase, uppercase, numbers and special characters
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -93,7 +93,7 @@ Feature: Register olma
       #| 123Aa*   |
       #| %09Ehk   |
 
-  @TC13
+  @Register_TC13
   Scenario Outline: TC_13 Create a strong password: use lowercase, uppercase, numbers and special characters(negative test)
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -122,7 +122,7 @@ Feature: Register olma
      #|  3333**** |
      #|  333333 |
      #|         |
-  @TC14
+  @Register_TC14
   Scenario: TC_014 Password must be reused in the same way
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -137,7 +137,7 @@ Feature: Register olma
     Then The user verifies seeing the text Welcome to Hubcomfy!
     And User quits page
 
-  @TC15
+  @Register_TC15
   Scenario: TC_015 Password must be reused in the same way(negative test)
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
@@ -151,7 +151,7 @@ Feature: Register olma
     And User clicks the register button
     Then The user confirms that they are unable to log in by seeing the text "Password and Confirm-password are not same."
     And User quits page
-  @TC16
+  @Register_TC16
   Scenario: TC_016 Account must be confirmed via email
     When User go to "minuteEmail" to receive a valid email
     And User receive the email from the page they go to
